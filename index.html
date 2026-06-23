@@ -29,12 +29,7 @@
         --warn-bg: #412402; --warn-text: #ef9f27;
       }
     }
-    body {
-      background: var(--bg); color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      min-height: 100vh; display: flex;
-      align-items: flex-start; justify-content: center; padding: 2rem 1rem;
-    }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 2rem 1rem; }
     #app { width: 100%; max-width: 560px; }
     .header { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
     .header i { font-size: 28px; color: var(--green); }
@@ -43,42 +38,23 @@
     .card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1rem; }
     .card-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 12px; }
     label { font-size: 13px; color: var(--muted); display: block; margin-bottom: 5px; }
-    input[type="text"] {
-      width: 100%; padding: 9px 13px; font-size: 13px; font-family: monospace;
-      border: 0.5px solid var(--border2); border-radius: var(--radius-sm);
-      background: var(--surface2); color: var(--text); outline: none; transition: border-color 0.15s;
-    }
+    input[type="text"] { width: 100%; padding: 9px 13px; font-size: 13px; font-family: monospace; border: 0.5px solid var(--border2); border-radius: var(--radius-sm); background: var(--surface2); color: var(--text); outline: none; transition: border-color 0.15s; }
     input[type="text"]:focus { border-color: var(--green); }
     .input-group { margin-bottom: 12px; }
-    .btn-green {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 10px 20px; background: var(--green); border: none;
-      border-radius: var(--radius-pill); color: #000; font-size: 14px;
-      font-weight: 600; cursor: pointer; transition: background 0.15s;
-    }
+    .btn-green { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; background: var(--green); border: none; border-radius: var(--radius-pill); color: #000; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
     .btn-green:hover { background: var(--green-hover); }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 10px 20px; background: transparent;
-      border: 0.5px solid var(--border2); border-radius: var(--radius-pill);
-      color: var(--text); font-size: 14px; cursor: pointer; transition: background 0.15s;
-    }
+    .btn-outline { display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; background: transparent; border: 0.5px solid var(--border2); border-radius: var(--radius-pill); color: var(--text); font-size: 14px; cursor: pointer; transition: background 0.15s; }
     .btn-outline:hover { background: var(--surface2); }
     .btn-full { width: 100%; justify-content: center; }
     .step-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
     .step-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--muted); line-height: 1.5; }
-    .step-num {
-      background: var(--info-bg); color: var(--info-text); border-radius: 50%;
-      width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 600; flex-shrink: 0; margin-top: 1px;
-    }
+    .step-num { background: var(--info-bg); color: var(--info-text); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; flex-shrink: 0; margin-top: 1px; }
     .step-list a { color: var(--green); text-decoration: none; }
-    .step-list a:hover { text-decoration: underline; }
     code { font-family: monospace; font-size: 12px; background: var(--surface2); padding: 2px 6px; border-radius: 4px; word-break: break-all; }
-    .msg { font-size: 13px; padding: 8px 12px; border-radius: var(--radius-sm); margin-top: 10px; display: none; }
-    .msg.info { background: var(--info-bg); color: var(--info-text); display: block; }
-    .msg.error { background: var(--danger-bg); color: var(--danger-text); display: block; }
-    .msg.success { background: var(--success-bg); color: var(--success-text); display: block; }
+    .msg { font-size: 13px; padding: 8px 12px; border-radius: var(--radius-sm); margin-top: 10px; }
+    .msg.info { background: var(--info-bg); color: var(--info-text); }
+    .msg.error { background: var(--danger-bg); color: var(--danger-text); }
+    .msg.success { background: var(--success-bg); color: var(--success-text); }
     #player-section { display: none; }
     .user-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
     .user-info { display: flex; align-items: center; gap: 9px; }
@@ -130,6 +106,11 @@
     .ev-time { font-family: monospace; opacity: 0.7; flex-shrink: 0; }
     .ev-msg { flex: 1; line-height: 1.4; }
     .empty { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 13px; }
+    /* DEBUG */
+    #debug-box { background: #111; color: #0f0; font-family: monospace; font-size: 12px; padding: 10px; border-radius: 8px; margin-bottom: 1rem; max-height: 160px; overflow-y: auto; display: none; }
+    #debug-box.visible { display: block; }
+    .debug-line { margin-bottom: 2px; }
+    .debug-toggle { font-size: 12px; color: var(--muted); cursor: pointer; text-decoration: underline; margin-bottom: 8px; display: inline-block; }
   </style>
 </head>
 <body>
@@ -156,17 +137,20 @@
       <button class="btn-green btn-full" onclick="startAuth()">
         <i class="ti ti-brand-spotify"></i> Conectar con Spotify
       </button>
-      <div id="auth-msg" class="msg" style="display:none;"></div>
+      <div id="auth-msg" class="msg info" style="display:none;"></div>
       <ol class="step-list">
         <li><span class="step-num">1</span><span>Ve a <a href="https://developer.spotify.com/dashboard" target="_blank">developer.spotify.com/dashboard</a> y crea una app</span></li>
-        <li><span class="step-num">2</span><span>En la creación selecciona <strong>Web Playback SDK</strong></span></li>
-        <li><span class="step-num">3</span><span>En <strong>Settings</strong> de tu app añade este Redirect URI: <code id="show-uri"></code></span></li>
+        <li><span class="step-num">2</span><span>Selecciona <strong>Web Playback SDK</strong></span></li>
+        <li><span class="step-num">3</span><span>En <strong>Settings</strong> añade este Redirect URI exacto: <code id="show-uri"></code></span></li>
         <li><span class="step-num">4</span><span>Copia tu <strong>Client ID</strong>, pégalo arriba y pulsa Conectar</span></li>
       </ol>
     </div>
   </div>
 
   <div id="player-section">
+    <span class="debug-toggle" onclick="toggleDebug()">🔧 Ver diagnóstico</span>
+    <div id="debug-box"></div>
+
     <div class="user-bar">
       <div class="user-info">
         <div class="avatar" id="user-avatar">?</div>
@@ -176,6 +160,7 @@
         <i class="ti ti-logout"></i> Salir
       </button>
     </div>
+
     <div class="card">
       <div class="card-label">BUSCAR Y ABRIR EN SPOTIFY</div>
       <div class="search-row">
@@ -186,6 +171,7 @@
         <div class="empty">Busca una canción para abrirla en Spotify</div>
       </div>
     </div>
+
     <div class="card">
       <div class="card-label">REPRODUCIENDO AHORA</div>
       <div id="status-badge" class="status-badge badge-idle">
@@ -214,6 +200,7 @@
         <button class="btn-outline" onclick="clearLog()"><i class="ti ti-trash"></i> Limpiar log</button>
       </div>
     </div>
+
     <div class="card">
       <div class="card-label">LOG DE EVENTOS</div>
       <div class="event-log-wrap">
@@ -224,6 +211,20 @@
 </div>
 
 <script>
+  // ── Debug ─────────────────────────────────────────────────────
+  function dbg(msg) {
+    console.log('[DBG]', msg);
+    const box = document.getElementById('debug-box');
+    if (!box) return;
+    const line = document.createElement('div');
+    line.className = 'debug-line';
+    line.textContent = new Date().toLocaleTimeString() + ' › ' + msg;
+    box.prepend(line);
+  }
+  function toggleDebug() {
+    document.getElementById('debug-box').classList.toggle('visible');
+  }
+
   // ── PKCE helpers ──────────────────────────────────────────────
   function randStr(len) {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
@@ -233,15 +234,11 @@
     return s;
   }
   async function sha256(plain) {
-    const enc = new TextEncoder().encode(plain);
-    return crypto.subtle.digest('SHA-256', enc);
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(plain));
   }
   function base64url(buf) {
     return btoa(String.fromCharCode(...new Uint8Array(buf)))
-      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-  }
-  async function pkceChallenge(verifier) {
-    return base64url(await sha256(verifier));
+      .replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
   }
 
   // ── State ─────────────────────────────────────────────────────
@@ -253,57 +250,54 @@
   const pageUrl = window.location.origin + window.location.pathname;
   document.getElementById('redirect-uri').value = pageUrl;
   document.getElementById('show-uri').textContent = pageUrl;
-
   const savedCid = localStorage.getItem('sp_cid');
   if (savedCid) document.getElementById('client-id').value = savedCid;
 
-  // ── Auth: PKCE flow ───────────────────────────────────────────
+  // ── Auth ──────────────────────────────────────────────────────
   async function startAuth() {
     const cid = document.getElementById('client-id').value.trim();
     if (!cid) { showMsg('Introduce tu Client ID', 'error'); return; }
     localStorage.setItem('sp_cid', cid);
-
     const verifier = randStr(64);
-    const challenge = await pkceChallenge(verifier);
+    const challenge = base64url(await sha256(verifier));
     localStorage.setItem('sp_verifier', verifier);
-
-    const scopes = 'user-read-playback-state user-read-currently-playing user-read-email';
+    const scopes = 'user-read-playback-state user-read-currently-playing user-read-email user-read-private';
     const params = new URLSearchParams({
-      response_type: 'code',
-      client_id: cid,
-      scope: scopes,
-      redirect_uri: pageUrl,
-      code_challenge_method: 'S256',
-      code_challenge: challenge,
+      response_type: 'code', client_id: cid, scope: scopes,
+      redirect_uri: pageUrl, code_challenge_method: 'S256', code_challenge: challenge,
     });
     showMsg('Redirigiendo a Spotify...', 'info');
     setTimeout(() => window.location.href = 'https://accounts.spotify.com/authorize?' + params, 600);
   }
 
   async function exchangeCode(code) {
+    dbg('Intercambiando code por token...');
     const cid = localStorage.getItem('sp_cid');
     const verifier = localStorage.getItem('sp_verifier');
+    dbg('cid=' + cid + ' verifier=' + (verifier ? verifier.substring(0,8) + '...' : 'MISSING'));
     const body = new URLSearchParams({
-      grant_type: 'authorization_code',
-      code,
-      redirect_uri: pageUrl,
-      client_id: cid,
-      code_verifier: verifier,
+      grant_type: 'authorization_code', code,
+      redirect_uri: pageUrl, client_id: cid, code_verifier: verifier,
     });
-    const r = await fetch('https://accounts.spotify.com/api/token', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body,
-    });
-    const data = await r.json();
-    if (data.access_token) {
-      localStorage.setItem('sp_token', data.access_token);
-      if (data.refresh_token) localStorage.setItem('sp_refresh', data.refresh_token);
-      localStorage.removeItem('sp_verifier');
-      window.history.replaceState({}, '', window.location.pathname);
-      onAuth(data.access_token);
-    } else {
-      showMsg('Error al obtener token: ' + (data.error_description || data.error), 'error');
+    try {
+      const r = await fetch('https://accounts.spotify.com/api/token', {
+        method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body,
+      });
+      const data = await r.json();
+      dbg('Token response: ' + JSON.stringify(data).substring(0, 120));
+      if (data.access_token) {
+        localStorage.setItem('sp_token', data.access_token);
+        if (data.refresh_token) localStorage.setItem('sp_refresh', data.refresh_token);
+        localStorage.removeItem('sp_verifier');
+        window.history.replaceState({}, '', window.location.pathname);
+        onAuth(data.access_token);
+      } else {
+        showMsg('Error: ' + (data.error_description || data.error || JSON.stringify(data)), 'error');
+        dbg('ERROR: ' + JSON.stringify(data));
+      }
+    } catch(e) {
+      dbg('FETCH ERROR: ' + e.message);
+      showMsg('Error de red: ' + e.message, 'error');
     }
   }
 
@@ -311,6 +305,7 @@
     const refresh = localStorage.getItem('sp_refresh');
     const cid = localStorage.getItem('sp_cid');
     if (!refresh || !cid) return false;
+    dbg('Refreshing token...');
     const body = new URLSearchParams({ grant_type: 'refresh_token', refresh_token: refresh, client_id: cid });
     const r = await fetch('https://accounts.spotify.com/api/token', {
       method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body,
@@ -320,13 +315,16 @@
       accessToken = data.access_token;
       localStorage.setItem('sp_token', data.access_token);
       if (data.refresh_token) localStorage.setItem('sp_refresh', data.refresh_token);
+      dbg('Token refreshed OK');
       return true;
     }
+    dbg('Refresh failed: ' + JSON.stringify(data));
     return false;
   }
 
   function onAuth(token) {
     accessToken = token;
+    dbg('onAuth — token starts: ' + token.substring(0,20) + '...');
     document.getElementById('auth-section').style.display = 'none';
     document.getElementById('player-section').style.display = 'block';
     loadProfile();
@@ -338,21 +336,33 @@
     ['sp_cid','sp_token','sp_refresh','sp_verifier'].forEach(k => localStorage.removeItem(k));
     window.history.replaceState({}, '', window.location.pathname);
     if (monitorInterval) clearInterval(monitorInterval);
-    isMonitoring = false;
+    isMonitoring = false; logEntries = [];
     document.getElementById('player-section').style.display = 'none';
     document.getElementById('auth-section').style.display = 'block';
   }
 
   async function loadProfile() {
+    dbg('loadProfile — calling /v1/me');
     try {
-      const r = await fetch('https://api.spotify.com/v1/me', { headers: { Authorization: 'Bearer ' + accessToken } });
+      const r = await fetch('https://api.spotify.com/v1/me', {
+        headers: { Authorization: 'Bearer ' + accessToken }
+      });
+      dbg('/v1/me status: ' + r.status);
       const d = await r.json();
-      document.getElementById('user-avatar').textContent = (d.display_name || 'U').substring(0,2).toUpperCase();
-      document.getElementById('user-name').textContent = d.display_name || d.id;
-    } catch(e) {}
+      dbg('/v1/me response: ' + JSON.stringify(d).substring(0,100));
+      if (d.display_name || d.id) {
+        document.getElementById('user-avatar').textContent = (d.display_name || d.id).substring(0,2).toUpperCase();
+        document.getElementById('user-name').textContent = d.display_name || d.id;
+      } else {
+        document.getElementById('user-name').textContent = 'Conectado';
+      }
+    } catch(e) {
+      dbg('loadProfile ERROR: ' + e.message);
+      document.getElementById('user-name').textContent = 'Conectado';
+    }
   }
 
-  // ── Utilities ─────────────────────────────────────────────────
+  // ── Utils ─────────────────────────────────────────────────────
   function showMsg(text, type) {
     const el = document.getElementById('auth-msg');
     el.textContent = text; el.className = 'msg ' + type; el.style.display = 'block';
@@ -360,43 +370,35 @@
   function fmtMs(ms) {
     if (!ms || ms < 0) return '0:00';
     const s = Math.floor(ms / 1000);
-    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2,'0');
   }
   function nowStr() {
-    return [new Date().getHours(), new Date().getMinutes(), new Date().getSeconds()]
-      .map(n => String(n).padStart(2,'0')).join(':');
+    return [new Date().getHours(), new Date().getMinutes(), new Date().getSeconds()].map(n=>String(n).padStart(2,'0')).join(':');
   }
   function addLog(type, icon, msg) {
     logEntries.unshift({ type, icon, msg, time: nowStr() });
-    const el = document.getElementById('event-log');
-    el.innerHTML = logEntries.slice(0,60).map(e =>
+    document.getElementById('event-log').innerHTML = logEntries.slice(0,60).map(e =>
       '<div class="ev ev-' + e.type + '"><span class="ev-time">' + e.time + '</span>' +
       '<i class="ti ti-' + e.icon + '" style="flex-shrink:0;font-size:14px;"></i>' +
       '<span class="ev-msg">' + e.msg + '</span></div>'
     ).join('');
   }
-  function clearLog() {
-    logEntries = [];
-    document.getElementById('event-log').innerHTML = '<div class="empty">Log limpiado</div>';
-  }
+  function clearLog() { logEntries = []; document.getElementById('event-log').innerHTML = '<div class="empty">Log limpiado</div>'; }
 
   // ── Monitor ───────────────────────────────────────────────────
   function toggleMonitor() { isMonitoring ? stopMonitor() : startMonitor(); }
-
   function startMonitor() {
     isMonitoring = true;
     document.getElementById('btn-monitor').innerHTML = '<i class="ti ti-player-stop"></i> Detener monitor';
-    addLog('info', 'ti-activity', 'Monitor iniciado — consultando cada 2s');
+    addLog('info','ti-activity','Monitor iniciado — consultando cada 2s');
     pollPlayback();
     monitorInterval = setInterval(pollPlayback, 2000);
   }
-
   function stopMonitor() {
-    isMonitoring = false;
-    clearInterval(monitorInterval); monitorInterval = null;
+    isMonitoring = false; clearInterval(monitorInterval); monitorInterval = null;
     document.getElementById('btn-monitor').innerHTML = '<i class="ti ti-activity"></i> Iniciar monitor';
-    addLog('warn', 'ti-player-stop', 'Monitor detenido');
-    setStatus('idle', 'Sin actividad');
+    addLog('warn','ti-player-stop','Monitor detenido');
+    setStatus('idle','Sin actividad');
   }
 
   async function pollPlayback() {
@@ -406,30 +408,16 @@
       });
       if (r.status === 401) {
         const ok = await refreshToken();
-        if (ok) {
-          r = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-            headers: { Authorization: 'Bearer ' + accessToken }
-          });
-        } else {
-          stopMonitor();
-          addLog('warn', 'ti-alert-circle', 'Sesión expirada — vuelve a conectar');
-          document.getElementById('player-section').style.display = 'none';
-          document.getElementById('auth-section').style.display = 'block';
-          return;
-        }
+        if (ok) r = await fetch('https://api.spotify.com/v1/me/player/currently-playing', { headers: { Authorization: 'Bearer ' + accessToken } });
+        else { stopMonitor(); addLog('warn','ti-alert-circle','Sesión expirada — vuelve a conectar'); logout(); return; }
       }
       if (r.status === 204) { handleIdle(); return; }
-      if (!r.ok) return;
+      if (!r.ok) { dbg('pollPlayback status: ' + r.status); return; }
       const data = await r.json();
       if (!data || !data.item) { handleIdle(); return; }
-
-      const track = data.item;
-      const playing = data.is_playing;
-      const progress = data.progress_ms;
-      const duration = track.duration_ms;
-      const pct = duration ? (progress / duration * 100) : 0;
-      const left = duration - progress;
-
+      const track = data.item, playing = data.is_playing;
+      const progress = data.progress_ms, duration = track.duration_ms;
+      const pct = duration ? (progress / duration * 100) : 0, left = duration - progress;
       document.getElementById('progress-fill').style.width = pct.toFixed(1) + '%';
       document.getElementById('pos-time').textContent = fmtMs(progress);
       document.getElementById('dur-time').textContent = fmtMs(duration);
@@ -437,22 +425,18 @@
       document.getElementById('info-left').textContent = fmtMs(left);
       document.getElementById('info-pop').textContent = track.popularity !== undefined ? track.popularity + '/100' : '—';
       document.getElementById('np-track').textContent = track.name;
-      const artist = track.artists.map(a => a.name).join(', ');
+      const artist = track.artists.map(a=>a.name).join(', ');
       document.getElementById('np-artist').textContent = artist;
       document.getElementById('np-album').textContent = track.album.name;
-      const imgs = track.album.images;
-      const wrap = document.getElementById('np-art-wrap');
+      const imgs = track.album.images, wrap = document.getElementById('np-art-wrap');
       if (imgs && imgs.length) {
         const cur = wrap.querySelector('img');
-        if (!cur || cur.dataset.tid !== track.id) {
-          wrap.innerHTML = '<img class="np-art" src="' + imgs[0].url + '" data-tid="' + track.id + '" alt="" />';
-        }
+        if (!cur || cur.dataset.tid !== track.id) wrap.innerHTML = '<img class="np-art" src="' + imgs[0].url + '" data-tid="' + track.id + '" alt="" />';
       }
       setStatus(playing ? 'playing' : 'paused', playing ? 'Reproduciendo' : 'Pausado');
-
       const trackChanged = track.id !== lastTrackId;
       if (trackChanged && playing) {
-        if (lastTrackId !== null) { addLog('end','ti-player-stop','⏹ Fin: ' + lastTrackName); onSongEnd(lastTrackName, lastTrackArtist); }
+        if (lastTrackId) { addLog('end','ti-player-stop','⏹ Fin: ' + lastTrackName); onSongEnd(lastTrackName, lastTrackArtist); }
         lastTrackId = track.id; lastTrackName = track.name; lastTrackArtist = artist;
         songStarted = true; endFired = false;
         addLog('start','ti-player-play','▶ Inicio: ' + track.name + ' — ' + artist);
@@ -464,28 +448,22 @@
         onSongStart(track.name, artist, duration);
       }
       if (left < 3000 && left >= 0 && playing && !endFired && songStarted) {
-        endFired = true;
-        addLog('end','ti-flag','🏁 Finalizando: ' + track.name);
-        onSongEnd(track.name, artist);
+        endFired = true; addLog('end','ti-flag','🏁 Finalizando: ' + track.name); onSongEnd(track.name, artist);
       }
       lastIsPlaying = playing;
-    } catch(e) { addLog('warn','ti-wifi-off','Error: ' + e.message); }
+    } catch(e) { dbg('pollPlayback ERROR: ' + e.message); addLog('warn','ti-wifi-off','Error: ' + e.message); }
   }
 
   function handleIdle() {
     if (lastTrackId) addLog('info','ti-music-off','Spotify no está reproduciendo nada');
     lastTrackId = null; lastIsPlaying = null; songStarted = false; endFired = false;
     setStatus('idle','Sin actividad');
-    document.getElementById('np-track').textContent = '—';
-    document.getElementById('np-artist').textContent = '—';
-    document.getElementById('np-album').textContent = '—';
+    ['np-track','np-artist','np-album'].forEach(id => document.getElementById(id).textContent = '—');
     document.getElementById('np-art-wrap').innerHTML = '<i class="ti ti-music" style="font-size:24px;color:var(--muted);"></i>';
     document.getElementById('progress-fill').style.width = '0%';
     document.getElementById('pos-time').textContent = '0:00';
     document.getElementById('dur-time').textContent = '0:00';
-    document.getElementById('info-pct').textContent = '—';
-    document.getElementById('info-left').textContent = '—';
-    document.getElementById('info-pop').textContent = '—';
+    ['info-pct','info-left','info-pop'].forEach(id => document.getElementById(id).textContent = '—');
   }
 
   function setStatus(type, text) {
@@ -497,12 +475,21 @@
   // ── Search ────────────────────────────────────────────────────
   async function doSearch() {
     const q = document.getElementById('search-input').value.trim();
-    if (!q || !accessToken) return;
+    if (!q) return;
+    if (!accessToken) { dbg('doSearch: no token!'); return; }
+    dbg('Searching: ' + q);
     try {
       const r = await fetch('https://api.spotify.com/v1/search?q=' + encodeURIComponent(q) + '&type=track&limit=10', {
         headers: { Authorization: 'Bearer ' + accessToken }
       });
+      dbg('Search status: ' + r.status);
+      if (r.status === 401) {
+        const ok = await refreshToken();
+        if (ok) { doSearch(); return; }
+        else { logout(); return; }
+      }
       const data = await r.json();
+      dbg('Search result items: ' + (data.tracks ? data.tracks.items.length : 'none'));
       const tracks = (data.tracks && data.tracks.items) || [];
       const list = document.getElementById('track-list');
       if (!tracks.length) { list.innerHTML = '<div class="empty">Sin resultados para "' + q + '"</div>'; return; }
@@ -518,31 +505,34 @@
           '<button class="open-btn" onclick="openSpotify(\'' + t.uri + '\',\'' + safeName + '\')"><i class="ti ti-brand-spotify"></i> Abrir</button>' +
           '</div>';
       }).join('');
-    } catch(e) { console.error(e); }
+    } catch(e) { dbg('Search ERROR: ' + e.message); }
   }
 
   function openSpotify(uri, name) {
-    window.location.href = uri;
     addLog('info','ti-external-link','Abriendo en Spotify: ' + name);
+    window.open('https://open.spotify.com/track/' + uri.split(':')[2], '_blank');
   }
 
-  // ── Callbacks — personaliza aquí ──────────────────────────────
-  function onSongStart(name, artist, durationMs) {
-    console.log('[EVENTO] CANCIÓN INICIADA', { name, artist, durationMs });
-  }
-  function onSongEnd(name, artist) {
-    console.log('[EVENTO] CANCIÓN TERMINADA', { name, artist });
-  }
+  // ── Callbacks ─────────────────────────────────────────────────
+  function onSongStart(name, artist, durationMs) { console.log('[EVENTO] CANCIÓN INICIADA', { name, artist, durationMs }); }
+  function onSongEnd(name, artist) { console.log('[EVENTO] CANCIÓN TERMINADA', { name, artist }); }
 
-  // ── Init: check for ?code= in URL (PKCE callback) ─────────────
+  // ── Init ──────────────────────────────────────────────────────
   const urlParams = new URLSearchParams(window.location.search);
   const code = urlParams.get('code');
+  const errParam = urlParams.get('error');
   const savedToken = localStorage.getItem('sp_token');
 
-  if (code) {
+  if (errParam) {
+    showMsg('Spotify rechazó la conexión: ' + errParam, 'error');
+  } else if (code) {
+    dbg('Got code from URL, exchanging...');
     exchangeCode(code);
   } else if (savedToken) {
+    dbg('Found saved token, using it');
     onAuth(savedToken);
+  } else {
+    dbg('No token, no code — showing auth screen');
   }
 </script>
 </body>
