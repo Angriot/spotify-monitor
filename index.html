@@ -363,13 +363,30 @@
             ${listeners ? '<div class="track-listeners"><i class="ti ti-headphones" style="font-size:11px;"></i> ' + listeners + '</div>' : ''}
           </div>
           <div class="track-actions">
-            <button class="btn btn-green btn-sm" onclick="openSpotify('${safeTrack}','${safeArtist}')" title="Abrir en Spotify"><i class="ti ti-brand-spotify"></i></button>
+            <button class="btn btn-green btn-sm" onclick="playAndMonitor('${safeTrack}','${safeArtist}')" title="Reproducir y monitorizar"><i class="ti ti-brand-spotify"></i></button>
             <button class="btn btn-outline btn-sm" onclick="openLastfm('${safeTrack}','${safeArtist}')" title="Ver en Last.fm"><i class="ti ti-brand-lastfm" style="color:var(--red);"></i></button>
           </div>
         </div>`;
       }).join('');
     } catch(e) { list.innerHTML = '<div class="empty">Error: ' + e.message + '</div>'; }
   }
+
+  function playAndMonitor(track, artist) {
+  // Abrir Spotify
+  const q = encodeURIComponent(track + ' ' + artist);
+  window.open('https://open.spotify.com/search/' + q, '_blank');
+
+  // Iniciar monitor automáticamente
+  if (!isMonitoring) {
+    startMonitor();
+  }
+
+  addLog(
+    'start',
+    'player-play',
+    '▶ Seleccionada: ' + track + ' — ' + artist
+  );
+}
 
   function openSpotify(track, artist) {
     const q = encodeURIComponent(track + ' ' + artist);
